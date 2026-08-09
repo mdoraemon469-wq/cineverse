@@ -17,9 +17,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Inject API Key
+      - name: Inject API Key (Node.js)
         run: |
-          sed -i 's/TMDB_PLACEHOLDER/${{ secrets.TMDB_API_KEY }}/g' script.js
+          node -e "const fs=require('fs'); fs.writeFileSync('script.js', fs.readFileSync('script.js','utf8').replace(/TMDB_PLACEHOLDER/g, '${{ secrets.TMDB_API_KEY }}'));"
 
       - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v3
