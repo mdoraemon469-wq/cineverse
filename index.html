@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CineVerse — Movie Hub</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet"/>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="nav-brand">
+                <i class="fas fa-film"></i>
+                <span>CineVerse</span>
+            </a>
+            <div class="nav-search">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search for movies..." />
+            </div>
+            <div class="nav-actions">
+                <button id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="btn-signin">Sign In</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Discover <br /><span class="highlight">Amazing</span> Movies</h1>
+                <p>Explore the latest blockbusters, timeless classics, and hidden gems — all in one place. Your next favorite film is just a click away.</p>
+                <div class="hero-buttons">
+                    <a href="#trending" class="btn-primary"><i class="fas fa-play"></i> Explore Now</a>
+                    <a href="#popular" class="btn-secondary"><i class="fas fa-fire"></i> Popular</a>
+                </div>
+            </div>
+            <div class="hero-poster">
+                <img id="heroPoster" src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUHTz3u6j2MgR1JbT.jpg" alt="Featured movie poster" loading="lazy" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MOVIE SECTIONS ===== -->
+    <main>
+        <section class="section" id="trending">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-chart-line"></i> Trending Now</h2>
+                    <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="movie-grid" id="trendingGrid"></div>
+            </div>
+        </section>
+
+        <section class="section" id="popular">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-fire"></i> Popular</h2>
+                    <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="movie-grid" id="popularGrid"></div>
+            </div>
+        </section>
+
+        <section class="section" id="topRated">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-star"></i> Top Rated</h2>
+                    <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="movie-grid" id="topRatedGrid"></div>
+            </div>
+        </section>
+
+        <section class="section" id="upcoming">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-calendar-alt"></i> Coming Soon</h2>
+                    <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="movie-grid" id="upcomingGrid"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="brand">
+                <i class="fas fa-film"></i>
+                <span style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">CineVerse</span>
+            </div>
+            <p>&copy; 2026 CineVerse. All rights reserved. Made with <i class="fas fa-heart" style="color: #f87171;"></i></p>
+            <div class="footer-socials">
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCROLL TO TOP ===== -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ===== MODAL ===== -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-poster-wrap" id="modalPosterWrap">
+                <img id="modalPoster" src="" alt="Movie poster" />
+                <div class="modal-info" id="modalInfo">
+                    <h2 id="modalTitle">Movie Title</h2>
+                    <div class="tagline" id="modalTagline">Tagline goes here</div>
+                    <div class="detail-meta" id="modalMeta">
+                        <span><i class="fas fa-calendar"></i> <span id="modalYear">----</span></span>
+                        <span><i class="fas fa-clock"></i> <span id="modalRuntime">-- min</span></span>
+                        <span><i class="fas fa-globe"></i> <span id="modalLanguage">--</span></span>
+                    </div>
+                    <div class="detail-rating">
+                        <span class="score" id="modalScore">0.0</span>
+                        <span class="stars" id="modalStars">☆☆☆☆☆</span>
+                        <span style="color: var(--text-muted); font-size: 0.85rem;">(<span id="modalVotes">0</span> votes)</span>
+                    </div>
+                    <p class="overview" id="modalOverview">Overview not available.</p>
+                    <div class="genres" id="modalGenres"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
