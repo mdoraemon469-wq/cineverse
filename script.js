@@ -1,7 +1,7 @@
 // ============================================================
 //  🔑 আপনার TMDB API Key এখানে বসান
 // ============================================================
-const TMDB_API_KEY = '';   // <-- এই জায়গায় আপনার কী লিখুন
+const API_KEY = "TMDB_PLACEHOLDER";
 
 const TMDB_BASE = 'https://api.themoviedb.org/3';
 const IMG_BASE = 'https://image.tmdb.org/t/p/w500';
