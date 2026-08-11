@@ -1,0 +1,15 @@
+{
+  "name": "CineVerse",
+  "short_name": "CineVerse",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#0a0a0f",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192x192/1a1a2e/ffffff?text=CV",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
