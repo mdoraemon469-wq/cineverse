@@ -2,7 +2,7 @@
   "name": "CineVerse",
   "short_name": "CineVerse",
   "description": "Discover movies with CineVerse.",
-  "start_url": ".",
+  "start_url": "/cineverse/",
   "display": "standalone",
   "background_color": "#0a0a0f",
   "theme_color": "#0a0a0f",
