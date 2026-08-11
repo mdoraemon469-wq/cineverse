@@ -1,7 +1,7 @@
 {
   "name": "CineVerse",
   "short_name": "CineVerse",
-  "description":"Discover and explore trending movies with CineVerse.",
+  "description": "Discover and explore trending movies with CineVerse.",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#0a0a0f",
