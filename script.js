@@ -1,9 +1,8 @@
 // ============================================================
-//  🔑 আপনার TMDB API Key এখানে বসান
+//  🌐 আপনার Cloudflare Worker URL এখানে বসান
 // ============================================================
-const API_KEY = "TMDB_PLACEHOLDER";
+const WORKER_URL = 'https://sparkling-bird-4f19.mdoraemon469.workers.dev';
 
-const TMDB_BASE = 'https://api.themoviedb.org/3';
 const IMG_BASE = 'https://image.tmdb.org/t/p/w500';
 const FALLBACK_POSTER = 'https://via.placeholder.com/500x750/1a1a2e/6c3bf1?text=No+Poster';
 
@@ -72,11 +71,11 @@ function getGenreNames(genreIds, allGenres) {
 }
 
 // ============================================================
-//  API
+//  API (Worker Proxy দিয়ে রিকোয়েস্ট পাঠানো হবে)
 // ============================================================
 async function fetchGenres() {
     try {
-        const res = await fetch(`${TMDB_BASE}/genre/movie/list?api_key=${TMDB_API_KEY}&language=en-US`);
+        const res = await fetch(`${WORKER_URL}/api/tmdb/genre/movie/list?language=en-US`);
         const data = await res.json();
         genreMap = data.genres || [];
     } catch (_) {
@@ -87,7 +86,7 @@ async function fetchGenres() {
 async function fetchMovies(endpoint) {
     try {
         const res = await fetch(
-            `${TMDB_BASE}${endpoint}?api_key=${TMDB_API_KEY}&language=en-US&page=1`
+            `${WORKER_URL}/api/tmdb${endpoint}?language=en-US&page=1`
         );
         const data = await res.json();
         return data.results || [];
@@ -99,7 +98,7 @@ async function fetchMovies(endpoint) {
 async function fetchMovieDetails(movieId) {
     try {
         const res = await fetch(
-            `${TMDB_BASE}/movie/${movieId}?api_key=${TMDB_API_KEY}&language=en-US&append_to_response=credits`
+            `${WORKER_URL}/api/tmdb/movie/${movieId}?language=en-US&append_to_response=credits`
         );
         return await res.json();
     } catch (_) {
@@ -110,7 +109,7 @@ async function fetchMovieDetails(movieId) {
 async function searchMovies(query) {
     try {
         const res = await fetch(
-            `${TMDB_BASE}/search/movie?api_key=${TMDB_API_KEY}&language=en-US&query=${encodeURIComponent(query)}&page=1`
+            `${WORKER_URL}/api/tmdb/search/movie?language=en-US&query=${encodeURIComponent(query)}&page=1`
         );
         const data = await res.json();
         return data.results || [];
