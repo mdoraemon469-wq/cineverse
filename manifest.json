@@ -71,21 +71,5 @@
       "type": "image/png",
       "purpose": "any maskable"
     }
-  ],
-  "screenshots": [
-    {
-      "src": "/cineverse/screenshots/home.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "platform": "wide",
-      "label": "CineVerse Home Page"
-    },
-    {
-      "src": "/cineverse/screenshots/search.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "platform": "wide",
-      "label": "Search Results"
-    }
   ]
 }
