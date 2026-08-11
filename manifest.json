@@ -25,7 +25,7 @@
       "url": "/cineverse/?search=true",
       "icons": [
         {
-          "src": "/cineverse/icons/search-96x96.png",
+          "src": "/cineverse/search-96x96.png",
           "sizes": "96x96",
           "type": "image/png"
         }
@@ -38,7 +38,7 @@
       "url": "/cineverse/?popular=true",
       "icons": [
         {
-          "src": "/cineverse/icons/trending-96x96.png",
+          "src": "/cineverse/trending-96x96.png",
           "sizes": "96x96",
           "type": "image/png"
         }
@@ -51,7 +51,7 @@
       "url": "/cineverse/?upcoming=true",
       "icons": [
         {
-          "src": "/cineverse/icons/upcoming-96x96.png",
+          "src": "/cineverse/upcoming-96x96.png",
           "sizes": "96x96",
           "type": "image/png"
         }
@@ -60,13 +60,13 @@
   ],
   "icons": [
     {
-      "src": "/cineverse/icons/icon-192x192.png",
+      "src": "/cineverse/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/cineverse/icons/icon-512x512.png",
+      "src": "/cineverse/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
