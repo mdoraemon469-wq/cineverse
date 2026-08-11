@@ -4,9 +4,9 @@
   "short_name": "CineVerse",
   "description": "Discover movies with CineVerse.",
   "start_url": "/cineverse/",
-  "scope": "/",
+  "scope": "/cineverse/",
   "display": "standalone",
-  "display_override": [],
+  "display_override": ["window-controls-overlay"],
   "orientation": "any",
   "lang": "en-US",
   "dir": "ltr",
@@ -16,28 +16,76 @@
   "iarc_rating_id": "G",
   "prefer_related_applications": false,
   "related_applications": [],
+  "protocol_handlers": [],
   "shortcuts": [
     {
       "name": "Search Movies",
       "short_name": "Search",
-      "description": "Find a movie quickly",
-      "url": "/cineverse/search",
-      "icons": [{ "src": "/icons/search-96x96.png", "sizes": "96x96" }]
+      "description": "Find your favorite movies",
+      "url": "/cineverse/?search=true",
+      "icons": [
+        {
+          "src": "/cineverse/icons/search-96x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Popular Movies",
+      "short_name": "Popular",
+      "description": "Trending movies now",
+      "url": "/cineverse/?popular=true",
+      "icons": [
+        {
+          "src": "/cineverse/icons/trending-96x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Upcoming Movies",
+      "short_name": "Upcoming",
+      "description": "Movies coming soon",
+      "url": "/cineverse/?upcoming=true",
+      "icons": [
+        {
+          "src": "/cineverse/icons/upcoming-96x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
     }
   ],
-  "protocol_handlers": [],
   "icons": [
     {
-      "src": "https://via.placeholder.com/192x192/1a1a2e/ffffff?text=CV",
+      "src": "/cineverse/icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "https://placehold.co/512x512/1a1a2e/ffffff/png?text=CV",
+      "src": "/cineverse/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/cineverse/screenshots/home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "CineVerse Home Page"
+    },
+    {
+      "src": "/cineverse/screenshots/search.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Search Results"
     }
   ]
 }
