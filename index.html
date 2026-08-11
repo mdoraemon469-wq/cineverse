@@ -143,17 +143,5 @@
     </div>
     <!-- External JavaScript -->
     <script src="script.js"></script>
-<script>
-  // Service Worker রেজিস্টার করুন
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/cineverse/sw.js')
-      .then(() => {
-        console.log('✅ Service Worker সফলভাবে রেজিস্টার হয়েছে!');
-      })
-      .catch((err) => {
-        console.log('❌ Service Worker রেজিস্টার করতে সমস্যা হয়েছে:', err);
-      });
-  }
-</script>
 </body>
 </html>
