@@ -345,3 +345,16 @@ themeToggle.addEventListener('click', () => {
 // ============================================================
 loadAllSections();
 console.log('🎬 CineVerse — Movie Hub loaded successfully!');
+
+// ============================================================
+//  SERVICE WORKER REGISTRATION (যোগ করা হলো)
+// ============================================================
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/cineverse/sw.js')
+        .then(() => {
+            console.log('✅ Service Worker registered successfully!');
+        })
+        .catch((err) => {
+            console.log('❌ Service Worker registration failed:', err);
+        });
+}
