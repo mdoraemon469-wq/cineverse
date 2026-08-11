@@ -1,11 +1,31 @@
 {
+  "id": "cineverse",
   "name": "CineVerse",
   "short_name": "CineVerse",
   "description": "Discover movies with CineVerse.",
   "start_url": "/cineverse/",
+  "scope": "/",
   "display": "standalone",
+  "display_override": [],
+  "orientation": "any",
+  "lang": "en-US",
+  "dir": "ltr",
   "background_color": "#0a0a0f",
   "theme_color": "#0a0a0f",
+  "categories": ["video"],
+  "iarc_rating_id": "G",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "shortcuts": [
+    {
+      "name": "Search Movies",
+      "short_name": "Search",
+      "description": "Find a movie quickly",
+      "url": "/cineverse/search",
+      "icons": [{ "src": "/icons/search-96x96.png", "sizes": "96x96" }]
+    }
+  ],
+  "protocol_handlers": [],
   "icons": [
     {
       "src": "https://via.placeholder.com/192x192/1a1a2e/ffffff?text=CV",
