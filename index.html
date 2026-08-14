@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CineVerse — Movie Hub</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <!-- External CSS -->
     <link rel="stylesheet" href="style.css" />
-    <link rel="manifest" href="./manifest.json" >
+    <link rel="manifest" href="./manifest.json" />
 </head>
 <body>
     <!-- ===== NAVBAR ===== -->
@@ -28,6 +28,11 @@
                 <button id="themeToggle" aria-label="Toggle theme">
                     <i class="fas fa-moon"></i>
                 </button>
+                <!-- DOWNLOAD APP BUTTON (NAVBAR) -->
+                <a href="https://drive.google.com/uc?export=download&id=1iyY3u_8wmfGQEIeuXO0nHKzmdfr7XAd6" class="btn-download-nav" download>
+                    <i class="fas fa-download"></i>
+                    <span>Download App</span>
+                </a>
                 <button class="btn-signin">Sign In</button>
             </div>
         </div>
@@ -37,12 +42,24 @@
     <section class="hero" id="hero">
         <div class="container hero-content">
             <div class="hero-text">
-              <br>
+                <br />
                 <h1>Discover <br /><span class="highlight">Amazing</span> Movies</h1>
                 <p>Explore the latest blockbusters, timeless classics, and hidden gems — all in one place. Your next favorite film is just a click away.</p>
                 <div class="hero-buttons">
                     <a href="#trending" class="btn-primary"><i class="fas fa-play"></i> Explore Now</a>
                     <a href="#popular" class="btn-secondary"><i class="fas fa-fire"></i> Popular</a>
+                    <!-- DOWNLOAD APP BUTTON (HERO) -->
+                    <a href="https://drive.google.com/uc?export=download&id=1iyY3u_8wmfGQEIeuXO0nHKzmdfr7XAd6" class="btn-download" download>
+                        <i class="fas fa-download"></i> Download App
+                    </a>
+                </div>
+                <!-- DOWNLOAD BADGE (below hero buttons) -->
+                <div class="download-badge">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Get the CineVerse app</span>
+                    <a href="https://drive.google.com/uc?export=download&id=1iyY3u_8wmfGQEIeuXO0nHKzmdfr7XAd6" download class="badge-link">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
             <div class="hero-poster">
@@ -94,14 +111,29 @@
         </section>
     </main>
 
+    <!-- ===== DOWNLOAD APP BANNER ===== -->
+    <section class="download-banner">
+        <div class="container download-banner-inner">
+            <div class="download-banner-text">
+                <i class="fas fa-rocket"></i>
+                <h3>Get the CineVerse App</h3>
+                <p>Watch on the go — download the app and enjoy a seamless movie experience.</p>
+            </div>
+            <a href="https://drive.google.com/uc?export=download&id=1iyY3u_8wmfGQEIeuXO0nHKzmdfr7XAd6" class="btn-download-banner" download>
+                <i class="fas fa-download"></i> Download Now
+                <span class="badge">APK</span>
+            </a>
+        </div>
+    </section>
+
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container footer-inner">
             <div class="brand">
                 <i class="fas fa-film"></i>
-                <span style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">CineVerse</span>
+                <span>CineVerse</span>
             </div>
-            <p>&copy; 2026 CineVerse. All rights reserved. Made with <i class="fas fa-heart" style="color: #f87171;"></i></p>
+            <p>&copy; 2026 CineVerse. All rights reserved. Made with <i class="fas fa-heart"></i></p>
             <div class="footer-socials">
                 <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -141,6 +173,7 @@
             </div>
         </div>
     </div>
+
     <!-- External JavaScript -->
     <script src="script.js"></script>
 </body>
