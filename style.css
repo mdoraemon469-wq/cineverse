@@ -24,7 +24,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: var(--font);
     background: var(--bg-primary);
@@ -32,13 +34,31 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: var(--bg-primary); }
-::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 10px;
+}
 
-a { text-decoration: none; color: inherit; }
-img { display: block; max-width: 100%; }
-button { cursor: pointer; font-family: var(--font); border: none; outline: none; }
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+button {
+    cursor: pointer;
+    font-family: var(--font);
+    border: none;
+    outline: none;
+}
 
 .container {
     max-width: 1320px;
@@ -161,6 +181,31 @@ button { cursor: pointer; font-family: var(--font); border: none; outline: none;
     box-shadow: 0 0 24px var(--accent-glow);
 }
 
+/* ---- Download Button (Nav) ---- */
+.btn-download-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent-gradient);
+    color: #fff;
+    padding: 0.5rem 1.1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+.btn-download-nav:hover {
+    transform: scale(1.04);
+    box-shadow: 0 6px 20px rgba(108, 59, 241, 0.4);
+    color: #fff;
+}
+.btn-download-nav i {
+    font-size: 0.95rem;
+}
+
 /* ===== Hero ===== */
 .hero {
     margin-top: 76px;
@@ -236,6 +281,65 @@ button { cursor: pointer; font-family: var(--font); border: none; outline: none;
     background: var(--bg-card-hover);
     border-color: var(--accent);
 }
+
+/* ---- Hero Download Button ---- */
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--accent-gradient);
+    color: #fff;
+    padding: 14px 34px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+.btn-download:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 28px rgba(108, 59, 241, 0.45);
+    color: #fff;
+}
+
+/* ---- Download Badge ---- */
+.download-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 1.2rem;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(8px);
+    padding: 0.6rem 1.2rem 0.6rem 1rem;
+    border-radius: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+.download-badge i:first-child {
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+.badge-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--accent-gradient);
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    font-size: 0.8rem;
+}
+.badge-link:hover {
+    transform: scale(1.12);
+    color: #fff;
+}
+
 .hero-poster {
     display: flex;
     justify-content: center;
@@ -368,6 +472,75 @@ button { cursor: pointer; font-family: var(--font); border: none; outline: none;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* ===== Download Banner ===== */
+.download-banner {
+    padding: 3rem 0;
+    background: var(--bg-secondary);
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+.download-banner-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.download-banner-text {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+.download-banner-text i {
+    font-size: 2rem;
+    color: var(--accent);
+}
+.download-banner-text h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.download-banner-text p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+.btn-download-banner {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: var(--accent-gradient);
+    color: #fff;
+    padding: 0.7rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.btn-download-banner:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 28px rgba(108, 59, 241, 0.4);
+    color: #fff;
+}
+.btn-download-banner .badge {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 0.15rem 0.7rem;
+    border-radius: 30px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
 /* ===== Skeleton ===== */
 .skeleton {
     background: var(--bg-card);
@@ -417,7 +590,9 @@ button { cursor: pointer; font-family: var(--font); border: none; outline: none;
 .modal-overlay.active .modal {
     transform: scale(1) translateY(0);
 }
-.modal::-webkit-scrollbar { width: 4px; }
+.modal::-webkit-scrollbar {
+    width: 4px;
+}
 .modal-close {
     position: sticky;
     top: 12px;
@@ -632,7 +807,9 @@ button { cursor: pointer; font-family: var(--font); border: none; outline: none;
     text-align: center;
     padding: 20px 0;
 }
-.hidden { display: none !important; }
+.hidden {
+    display: none !important;
+}
 
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
@@ -716,6 +893,27 @@ button { cursor: pointer; font-family: var(--font); border: none; outline: none;
     .modal-info .genres {
         justify-content: center;
     }
+    .download-banner-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .download-banner-text {
+        justify-content: center;
+    }
+    .btn-download-banner {
+        width: 100%;
+        justify-content: center;
+    }
+    .btn-download-nav span {
+        display: none;
+    }
+    .btn-download-nav {
+        padding: 0.5rem 0.9rem;
+    }
+    .download-badge {
+        width: 100%;
+        justify-content: center;
+    }
 }
 @media (max-width: 480px) {
     .movie-grid {
@@ -732,11 +930,24 @@ button { cursor: pointer; font-family: var(--font); border: none; outline: none;
         font-size: 1.8rem;
     }
     .hero-buttons .btn-primary,
-    .hero-buttons .btn-secondary {
+    .hero-buttons .btn-secondary,
+    .btn-download {
         padding: 12px 24px;
         font-size: 0.9rem;
+        width: 100%;
+        justify-content: center;
     }
     .container {
         padding: 0 16px;
+    }
+    .btn-download-nav {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.75rem;
+    }
+    .btn-download-nav i {
+        font-size: 0.8rem;
+    }
+    .download-banner-text h3 {
+        font-size: 1.1rem;
     }
 }
